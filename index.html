@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>autocomplete demo</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <style type="text/css">
+  	body{
+  		font-family: 'Marker Felt','News Cycle', arial;
+  		text-align:center;
+  		margin: 18% 2% 2% 3%;
+  	}
+
+  	img{
+  		width: 40%;
+  		margin: auto auto 3% 3%;
+  	}
+
+
+  </style>
+</head>
+<body>
+<img src="pic.jpg"/>
+<br/>
+<label for="autocomplete" >Entrez un mot français : </label>
+<input id="autocomplete">
+ 
+<script>
+$( "#autocomplete" ).autocomplete({
+    /*source: [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby", "perl", "ocaml", "haskell", "rust", "go" ]*/
+  source: "http://127.0.0.1:5000/"
+  /*python设定好服务器，直接访问服务器，得到列表*/
+  /*python里面还可以像php一样接收用户输入然后定义以什么方式返回什么*/
+});
+</script>
+ 
+</body>
+</html>
